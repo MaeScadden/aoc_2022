@@ -1,8 +1,8 @@
 pub mod builder;
-pub mod day1_1;
-pub mod day1_2;
+pub mod days;
 
 fn main() {
-    println!("[1] 1: {}", day1_1::main());
-    println!("[1] 2: {}", day1_2::main());
+    days::for_each(|day, one, two| {
+        println!("[{}]:\n  [1]: {}\n  [2]: {}", day, one(), two());
+    });
 }

@@ -1,4 +1,4 @@
-const INPUT: &str = include_str!("assets/day1");
+const INPUT: &str = include_str!("input");
 
 pub fn main() -> i32 {
     solve(INPUT, 3)
@@ -52,7 +52,8 @@ fn solve(input: &str, size: usize) -> i32 {
 #[cfg(test)]
 mod tests {
     mod given_sample_input {
-        use crate::{builder, day1_2::solve};
+        use super::super::solve;
+        use crate::builder;
 
         #[test]
         fn should_return_expected_value() {
